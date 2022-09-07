@@ -1,0 +1,27 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "BMW landing page for ROXX Media",
+  "main": "index.html",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Patka879/landing-page.git"
+  },
+  "keywords": [
+    "landing",
+    "page",
+    "js",
+    "html",
+    "css",
+    "swiper"
+  ],
+  "author": "Patrycja Mysiak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Patka879/landing-page/issues"
+  },
+  "homepage": "https://github.com/Patka879/landing-page#readme"
+}
