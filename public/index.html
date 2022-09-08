@@ -8,12 +8,15 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
         <link rel="stylesheet" href="../src/style.css" />
     </head>
     <body>
         <header>
-            <nav>
+            <nav class="header-nav">
                 <div class='nav-left'>
                     <div class="nav-left-top">
                         <a class='nav-link' href=''>Nowe BMW iX</a>
@@ -38,7 +41,7 @@
                         <button class="trial-btn">UMÓW JAZDĘ PRÓBNĄ</button>
                     </div>
                     <div class="swiper-slide">
-                        <div>
+                        <div class="swiper-slide-left">
                             <img class='slider-bmw-logo' src='./images/bmw_i_logo.png' alt='bmw-i-logo'>
                             <h1>NOWE BMW iX</h1>
                             <h4>WYBRÓBUJ!</h1>
@@ -46,7 +49,7 @@
                         <button class="trial-btn">UMÓW JAZDĘ PRÓBNĄ</button>
                     </div>
                     <div class="swiper-slide">
-                        <div>
+                        <div class="swiper-slide-left">
                             <img class='slider-bmw-logo' src='./images/bmw_i_logo.png' alt='bmw-i-logo'>
                             <h1>NOWE BMW iX</h1>
                             <h4>JESZCZE DZIŚ UMÓW SIĘ NA JAZDĘ PRÓBNĄ</h4>
@@ -104,12 +107,48 @@
                 <img class='gallery' src="./images/gallery.png" alt="gallery-of-bmw-pictures">
             </section>
             <section class="form-section">
+                
 
+                </nav>
             </section>
         </main>
         <footer>
-
+            <nav class="footer-nav">
+                <p>Dołącz do nas</p>
+                <div>
+                    <a href=""><img class='social-icon' src="images/facebook.png" alt="facebook-logo"></a>
+                    <a href=""><img class='social-icon' src="images/instagram.png" alt="facebook-logo"></a>
+                    <a href=""><img class='social-icon' src="images/youtube.png" alt="youtube-logo"></a>
+                    <a href=""><img class='social-icon' src="images/linkedin.png" alt="linkedin-logo"></a>
+                    <a href=""><img class='social-icon' src="images/twitter.png" alt="twitter-logo"></a>
+                </div>
+            </nav>
+            <div class="site-map">
+                <div class="site-map-client-zone">
+                    <p class="subtitle">Strefa klienta</p>
+                    <a class="site-map-link">Centrum Obsługi Klienta BMW</a>
+                    <a class="site-map-link">Znajdź dealera BMW</a>
+                    <a class="site-map-link">Pobierz cenniki/broszury</a>
+                    <a class="site-map-link">Często zadawane pytania</a>
+                </div>
+                <div class="site-map-meet-BMW">
+                    <p class="subtitle">Poznaj BMW</p>
+                    <a class="site-map-link">Informacje prasowe</a>
+                    <a class="site-map-link">BMW Polska</a>
+                    <a class="site-map-link">Kariera</a>
+                </div>
+                <div class="site-map-legal-info">
+                    <p class="subtitle">Informacje prawne</p>
+                    <a class="site-map-link">Mapa serwisu</a>
+                    <a class="site-map-link">Nota prawna / prywatność</a>
+                    <a class="site-map-link">Polityka cookie</a>
+                    <a class="site-map-link">Warunki korzystania z MyBMW</a>
+                </div>
+            </div>
         </footer>
+        <div class="watermark">
+            <p>© BMW Polska 2020</p>
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         <script src="../src/index.js"></script>
     </body>

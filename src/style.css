@@ -13,14 +13,6 @@ header {
     background-size: cover;
 }
 
-nav {
-    display: flex;
-    color: white;
-    text-shadow: 0px 0px 20px #242424;
-    margin: 0 280px;
-    padding-top: 30px;
-}
-
 a {
     cursor: pointer;
     text-decoration: none;
@@ -40,6 +32,22 @@ h2 {
 h4 {
     font-size: 16px;
     margin-top: 10px;
+}
+
+footer {
+    background-color: #E6E6E6;
+    height: 430px;
+    color: #707070;
+    font-family: 'Roboto', sans-serif;
+    padding: 35px 270px;
+}
+
+.header-nav {
+    display: flex;
+    color: white;
+    text-shadow: 0px 0px 20px #242424;
+    margin: 0 280px;
+    padding-top: 30px;
 }
 
 .nav-left {
@@ -84,7 +92,7 @@ h4 {
 .swiper-slide-left {
     display: flex;
     flex-direction: column;
-    align-self:flex-start;
+    align-self: flex-start;
 }
 
 .swiper-pagination {
@@ -123,7 +131,7 @@ h4 {
 }
 
 .facts-section {
-    margin: 160px 0 80px 80px;
+    margin: 160px 0 190px 80px;
     background-color: #ffffff;
     display: grid;
     grid-template-columns: 320px 536px 100px auto;
@@ -169,7 +177,7 @@ h4 {
     grid-template-columns: 536px 154px 536px 320px;
     grid-template-rows: 60px 260px 270px;
     column-gap: 16px;
-    margin: 80px 0 80px 280px;
+    margin: 90px 0 90px 280px;
     background-color: white;
 }
 
@@ -196,6 +204,44 @@ h4 {
 
 .gallery {
     width: 99%;
-    margin: 10px;
+    margin: 90px 10px;
+}
 
+.footer-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid #BEBEBE;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px; 
+    margin-left: 20px;  
+}
+
+.site-map {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.site-map-client-zone, .site-map-meet-BMW, .site-map-legal-info {
+    display: flex;
+    flex-direction: column;
+    margin-right: 260px;
+}
+
+.site-map-link {
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: bold;
+}
+
+.watermark {
+    background-color: #FFFFFF;
+    padding: 10px 270px;
+    font-size: 14px;
 }
