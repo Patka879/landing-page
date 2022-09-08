@@ -30,6 +30,12 @@ h1 {
     margin: 0;
 }
 
+h2 {
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 700;
+}
+
 h4 {
     font-size: 16px;
     margin-top: 10px;
@@ -113,4 +119,76 @@ h4 {
     border: none;
     font-size: 18px;
     height: 80px;
+}
+
+.facts-section {
+    margin: 160px 80px;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 320px 536px 100px auto;
+    grid-template-rows: 320px 260px 60px;
+    column-gap: 16px;
+}
+
+.bmw-info-img1 {
+    grid-row: 2 / span 1;
+    width: 320px;
+}
+
+.bmw-info-img2 {
+    grid-column: 2 / span 1;
+    width: 536px;
+}
+
+.bmw-info-box {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+    display: grid;
+    grid-template-columns: 190px 190px 190px;
+    grid-template-rows: 108px 220px 200px auto;
+    gap: 30px;  
+}
+
+.bmw-info-box-title {
+    grid-column: 1 / span 3;
+}
+
+.bmw-info-box-id {
+    border-bottom: 1px solid #4E4E4E;
+    font-size: 12px;
+}
+
+.textarea {
+    color: #4E4E4E;
+    font-size: 14px;
+}
+
+.innovation-section {
+    display: grid;
+    grid-template-columns: 536px 154px 536px 320px;
+    grid-template-rows: 60px 260px 270px;
+    column-gap: 16px;
+    margin: 60px 0 0 280px;
+    background-color: white;
+}
+
+.innovation-textarea-title {
+    grid-row: 1 / span 1;
+}
+
+.subtitle {
+    color: #707070;
+    font-size: 20px;
+}
+
+.innovation-img1 {
+    width: 536px;
+    grid-column: 3 / span 1;
+    grid-row: 2;
+}
+
+.innovation-img2 {
+    grid-column: 4;
+    grid-row: 1;
+    width: 320px;
 }
