@@ -4,6 +4,7 @@ body {
     height: 100%;
     box-sizing: border-box;
     font-family: 'Cairo', sans-serif;
+    overflow-x: hidden;
 }
 
 header {
@@ -122,7 +123,7 @@ h4 {
 }
 
 .facts-section {
-    margin: 160px 80px;
+    margin: 160px 0 80px 80px;
     background-color: #ffffff;
     display: grid;
     grid-template-columns: 320px 536px 100px auto;
@@ -168,7 +169,7 @@ h4 {
     grid-template-columns: 536px 154px 536px 320px;
     grid-template-rows: 60px 260px 270px;
     column-gap: 16px;
-    margin: 60px 0 0 280px;
+    margin: 80px 0 80px 280px;
     background-color: white;
 }
 
@@ -191,4 +192,10 @@ h4 {
     grid-column: 4;
     grid-row: 1;
     width: 320px;
+}
+
+.gallery {
+    width: 99%;
+    margin: 10px;
+
 }
