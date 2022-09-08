@@ -3,19 +3,29 @@ body {
     background-color: aqua;
     height: 100%;
     box-sizing: border-box;
-    font-family: 'Cairo', sans-serif;
     overflow-x: hidden;
+    font-family: 'Cairo', sans-serif;
 }
 
 header {
     height: 864px;
     background: url(../public/images/header-img.png) no-repeat center center fixed; 
     background-size: cover;
+    font-family: 'Cairo', sans-serif;
 }
 
 a {
     cursor: pointer;
     text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+a:hover, button:hover {
+  transform: scale(1.1);
+  transition: all 100ms;
 }
 
 h1 {
@@ -34,12 +44,27 @@ h4 {
     margin-top: 10px;
 }
 
+label {
+    font-size: 20px;
+    color: #707070;
+}
+
 footer {
     background-color: #E6E6E6;
     height: 430px;
     color: #707070;
     font-family: 'Roboto', sans-serif;
     padding: 35px 270px;
+}
+
+button {
+    background-color: #3369D3;
+    padding: 15px 90px;
+    color:#FFFFFF;
+    border: none;
+    font-size: 18px;
+    height: 80px;
+    letter-spacing: 0.9px;
 }
 
 .header-nav {
@@ -61,9 +86,9 @@ footer {
 }
 
 .nav-link { 
-    font-size: 18px;
     margin-right: 60px;
     color:#FFFFFF;
+    font-size: 18px;
 }
 
 .nav-left-bottom {
@@ -121,13 +146,7 @@ footer {
 }
 
 .trial-btn {
-    background-color: #3369D3;
-    padding: 15px 90px;
     margin-left: 100px;
-    color:#FFFFFF;
-    border: none;
-    font-size: 18px;
-    height: 80px;
 }
 
 .facts-section {
@@ -188,6 +207,8 @@ footer {
 .subtitle {
     color: #707070;
     font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 32px;
 }
 
 .innovation-img1 {
@@ -244,4 +265,38 @@ footer {
     background-color: #FFFFFF;
     padding: 10px 270px;
     font-size: 14px;
+}
+
+.form-section {
+    margin: 90px 0 90px 600px;
+    background-color: #4E4E4E;
+}
+
+.form-container {
+    height: 900px;
+    width: 812px;
+    box-shadow: 3px 3px 60px #00000012;
+    background-color: white;
+    margin-left: 100px;
+    padding: 90px;
+}
+
+#form {
+    margin: 90px 0;
+}
+
+.form-title {
+    font-size: 20px;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+}
+
+.input-text {
+    padding: 17px;
+    width: 500px;
+    margin-bottom: 30px;
+}
+
+.input-radio {
+    margin-bottom: 30px;
 }

@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
         <link rel="stylesheet" href="../src/style.css" />
     </head>
@@ -20,7 +20,7 @@
                 <div class='nav-left'>
                     <div class="nav-left-top">
                         <a class='nav-link' href=''>Nowe BMW iX</a>
-                        <a class='nav-link' href=''>Umów jazdę próbną</a>
+                        <a class='nav-link' href='#form'>Umów jazdę próbną</a>
                     </div>  
                     <div class="nav-left-bottom">
                         <h4>Radość z jazdy</h4>
@@ -107,9 +107,24 @@
                 <img class='gallery' src="./images/gallery.png" alt="gallery-of-bmw-pictures">
             </section>
             <section class="form-section">
+                <div class="form-container">
+                    <h2>UMÓW JAZDĘ PRÓBNĄ</h2>
+                    <p class="subtitle">Zachęcamy do ograniczenia poruszania się i pozostania w domu.</p>
+                    <p class="subtitle">Jeśli jednak jazda testowa okaże się niezbędna prosimy o wypełnienie poniższego formularza.</p>
+                    <form id="form">
+                        <p class="form-title">Wypełnij formularz swoimi danymi.</p>
+                        <input class="input-radio" type="radio" name="pan" value="Pan">
+                        <label for="html">Pan</label>
+                        <input class="input-radio" type="radio" name="pani" value="Pani">
+                        <label for="html">Pani</label><br>
+                        <input class="input-text" type="text" name="name" placeholder="Imię*" required><br>
+                        <input class="input-text" type="text" name="name" placeholder="Nazwisko*" required><br>
+                        <input class="input-text" type="email" name="name" placeholder="E-mail*" required><br>
+                        <input class="input-text" type="number" name="name" placeholder="Numer telefonu*" required><br>
+                        <button class="submit-btn">WYŚLIJ</button>
+                    </form>
+                </div>
                 
-
-                </nav>
             </section>
         </main>
         <footer>
