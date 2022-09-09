@@ -1,3 +1,469 @@
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+    }
+
+    header {
+        height: 864px;
+        font-family: 'Cairo', sans-serif;
+    }
+    
+    a {
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+    button {
+        cursor: pointer;
+    }
+    
+    a:hover, button:hover {
+      transform: scale(1.02);
+      transition: all 100ms;
+    }
+    
+    a:active, button:active {
+        transform: scale(0.99);
+        transition: all 100ms;
+    }
+    
+    h1 {
+        font-size: 48px;
+        margin: 0;
+        line-height: 56px;
+    }
+    
+    h2 {
+        font-size: 36px;
+        line-height: 40px;
+        font-weight: 700;
+    }
+    
+    h4 {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    
+    label {
+        font-size: 20px;
+        color: #707070;
+    }
+    
+    footer {
+        background-color: #E6E6E6;
+        height: 430px;
+        color: #707070;
+        font-family: 'Roboto', sans-serif;
+        padding: 35px 270px;
+    }
+    
+    .header-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        text-shadow: 0px 0px 20px #242424;
+        padding: 30px;
+        position: relative;
+        z-index: 100;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: transparent;
+        border: none;
+    }
+
+    .line {
+        fill: none;
+        stroke: rgb(255, 255, 255);
+        stroke-width: 6;
+        transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+          stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .line1 {
+        stroke-dasharray: 60 207;
+        stroke-width: 6;
+      }
+      .line2 {
+        stroke-dasharray: 60 60;
+        stroke-width: 6;
+      }
+      .line3 {
+        stroke-dasharray: 60 207;
+        stroke-width: 6;
+      }
+      .opened .line1 {
+        stroke-dasharray: 90 207;
+        stroke-dashoffset: -134;
+        stroke-width: 6;
+      }
+      .opened .line2 {
+        stroke-dasharray: 1 60;
+        stroke-dashoffset: -30;
+        stroke-width: 6;
+      }
+      .opened .line3 {
+        stroke-dasharray: 90 207;
+        stroke-dashoffset: -134;
+        stroke-width: 6;
+      }
+
+    .nav-mobile-overlay {
+        position: fixed; 
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 30px;
+        width: 100vw; 
+        height: 764px; 
+        top: 100px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(0, 0, 0); 
+        z-index: 4; 
+    }
+
+    .nav-mobile-link {
+        border-bottom: 1px solid #343434;
+        color: white;
+        margin-bottom: 30px;
+        font-size: 16px;
+        padding-bottom: 30px;
+        width: 250px;
+        text-align: center;
+    }
+
+    .nav-mobile-btn {
+        background-color: #3369D3;
+        color:#FFFFFF;
+        border: none;
+        font-size: 14px;
+        height: 80px;
+        margin-top: 100px;
+        letter-spacing: 0.9px;
+        width: 270px;
+    }
+    
+    .nav-left {
+        display: none;
+        margin: 0;
+    }
+    
+    .nav-left-top {
+        display: flex;
+        border-bottom: 1px solid rgba(255, 255, 255, .25);
+        padding: 0px 800px 30px 0; 
+    }
+    
+    .nav-link { 
+        margin-right: 60px;
+        color:#FFFFFF;
+        font-size: 18px;
+    }
+    
+    .nav-left-bottom {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .logo {
+        height: 40px;
+    }
+    
+    .swiper {
+        width: 100vw;
+        height: 720px;
+        position: absolute;
+            top: 0;
+        z-index: 10;
+    }
+    
+    .swiper-slide {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color:#FFFFFF;
+        background-size: cover; 
+    }
+    
+    #slide1 {
+        background-image:
+        linear-gradient(90deg, #000000a8 0%, #00000000 100%),
+        url(../public/images/header-img.png)
+    }
+    
+    #slide2 {
+        background-image:
+        linear-gradient(90deg, #000000a8 0%, #00000000 100%),
+        url(../public/images/header-img2.jpg);
+    }
+    
+    #slide3 {
+        background-image:
+        linear-gradient(90deg, #000000a8 0%, #00000000 100%),
+        url(../public/images/header-img3.jpg);
+    }
+    
+    .swiper-slide-left {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        margin: 150px 0 0 20px;
+    }
+    
+    .swiper-pagination {
+        position: absolute;
+        width: auto !important;
+        margin: 0 0 60px 90px;
+    }
+    .swiper-pagination-bullet {
+        border-radius: 0;
+        width: 40px;
+        height: 5px;
+        text-align: center;
+        color:#000;
+        opacity: 1;
+        background: #FFFFFF;
+    }
+    .swiper-pagination-bullet-active {
+        color:#ffffff;
+        background: #3369D3;
+        height: 3.33px;
+    }
+    
+    .slider-bmw-logo {
+        width: 32px;
+        margin-bottom: 20px;
+    }
+    
+    .trial-btn {
+        background-color: #3369D3;
+        color:#FFFFFF;
+        border: none;
+        padding: 10px 60px;
+        margin: 180px 0 60px 0;
+        font-size: 16px;
+        width: 260px;
+        letter-spacing: 0.9px;
+    }
+    
+    .facts-section {
+        margin: 160px 0 190px 80px;
+        background-color: #ffffff;
+        display: grid;
+        grid-template-columns: 320px 536px 100px auto;
+        grid-template-rows: 320px 260px 60px;
+        column-gap: 16px;
+    }
+    
+    .reveal {
+        transform: translateY(150px);
+        opacity: 0;
+        transition: 2s all ease;
+    }
+    
+    .reveal.active{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+    .bmw-info-img1 {
+        grid-row: 2 / span 1;
+        width: 320px;
+    }
+    
+    .bmw-info-img2 {
+        grid-column: 2 / span 1;
+        width: 536px;
+    }
+    
+    .bmw-info-box {
+        grid-column: 4;
+        grid-row: 1 / span 2;
+        display: grid;
+        grid-template-columns: 190px 190px 190px;
+        grid-template-rows: 120px 220px 200px auto;
+        gap: 30px;  
+    }
+    
+    .svg-el {
+        width: 300px;
+        height: 30px;
+    }
+    
+    .bmw-info-box-title {
+        grid-column: 1 / span 3;
+        margin: 0;
+    }
+    
+    .bmw-info-box-id {
+        border-bottom: 1px solid #4E4E4E;
+        font-size: 12px;
+    }
+    
+    .textarea {
+        color: #4E4E4E;
+        font-size: 14px;
+    }
+    
+    .innovation-section {
+        display: grid;
+        grid-template-columns: 536px 154px 536px 320px;
+        grid-template-rows: 60px 260px 270px;
+        column-gap: 16px;
+        margin: 90px 0 90px 280px;
+        background-color: white;
+    }
+    
+    .innovation-textarea-title {
+        grid-row: 1 / span 1;
+    }
+    
+    .subtitle {
+        color: #707070;
+        font-size: 20px;
+        font-family: 'Open Sans', sans-serif;
+        line-height: 32px;
+    }
+    
+    .innovation-img1 {
+        width: 536px;
+        grid-column: 3 / span 1;
+        grid-row: 2;
+    }
+    
+    .innovation-img2 {
+        grid-column: 4;
+        grid-row: 1;
+        width: 320px;
+    }
+    
+    .gallery {
+        width: 99%;
+        margin: 90px 10px;
+    }
+    
+    .footer-nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        border-bottom: 1px solid #BEBEBE;
+        padding-bottom: 15px;
+        margin-bottom: 40px;
+        font-size: 20px;
+    }
+    
+    .social-icon {
+        width: 32px;
+        height: 32px; 
+        margin-left: 20px;  
+    }
+    
+    .site-map {
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    .site-map-client-zone, .site-map-meet-BMW, .site-map-legal-info {
+        display: flex;
+        flex-direction: column;
+        margin-right: 260px;
+    }
+    
+    .site-map-link {
+        font-size: 14px;
+        line-height: 28px;
+        font-weight: bold;
+    }
+    
+    .watermark {
+        background-color: #FFFFFF;
+        padding: 10px 270px;
+        font-size: 14px;
+    }
+    
+    .form-section {
+        margin: 90px 0;
+        height: 1200px;
+        background-image: url(../public/images/tlo1.png);
+        background-size: cover;
+        padding-left: 600px
+    }
+    
+    .form-container {
+        height: 850px;
+        width: 800px;
+        box-shadow: 3px 3px 60px #00000012;
+        padding: 90px;
+        background-color: #FFFFFF;
+    }
+    
+    .form {
+        margin: 90px 0;
+    }
+    
+    .form-title {
+        font-size: 20px;
+        font-family: 'Cairo', sans-serif;
+        font-weight: 700;
+    }
+    
+    .input-text {
+        padding: 17px;
+        width: 500px;
+        margin-bottom: 30px;
+    }
+    
+    .input-radio {
+        margin-bottom: 30px;
+    }
+    
+    .overlay {
+      position: fixed; 
+      width: 100%; 
+      height: 100%; 
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.9); 
+      z-index: 2; 
+      display: none;
+    }
+    
+    .form-overlay {
+        position: fixed;
+            top: 300px;
+            left: 1000px;
+        width: 250px;
+        z-index: 3;
+        color: white;
+        text-align: center;
+        line-height: 24px;
+        display: none;
+    }
+    
+    .form-overlay-title {
+        font-size: 20px;
+        margin-bottom: 30px;
+        font-weight: 600;
+    }
+    .form-overlay-note {
+        font-size: 13px;
+        margin-bottom: 60px;
+        font-family: 'Roboto', sans-serif;
+    }
+ 
+@media (min-width: 768px) {
+
 body {
     margin: 0;
     height: 100%;
@@ -71,15 +537,22 @@ button {
 
 .header-nav {
     display: flex;
+    justify-content: initial;
+    align-items: initial;
     color: white;
     text-shadow: 0px 0px 20px #242424;
     margin: 0 280px;
-    padding-top: 30px;
+    padding: 30px 0 0 0;
     position: relative;
     z-index: 100;
 }
 
+.menu {
+    display: none;
+}
+
 .nav-left {
+    display: block;
     margin-right: 40px;
 }
 
@@ -114,7 +587,7 @@ button {
 
 .swiper-slide {
     margin: 0;
-    display: flex;
+    flex-direction: row;
     align-items: flex-end;
     color:#FFFFFF;
     background-size: cover; 
@@ -156,8 +629,6 @@ button {
 	width: 60px;
 	height: 5px;
 	text-align: center;
-	line-height: 30px;
-	font-size: 12px;
 	color:#000;
 	opacity: 1;
 	background: #FFFFFF;
@@ -165,6 +636,7 @@ button {
 .swiper-pagination-bullet-active {
 	color:#ffffff;
 	background: #3369D3;
+    height: 5px;
 }
 
 .slider-bmw-logo {
@@ -172,8 +644,10 @@ button {
 }
 
 .trial-btn {
-    margin-left: 100px;
-    margin-bottom: 60px;
+    margin: 0 0 0px 100px;
+    padding: 15px 90px;
+    font-size: 18px;
+    width: auto;
 }
 
 .facts-section {
@@ -381,4 +855,6 @@ button {
     font-size: 13px;
     margin-bottom: 60px;
     font-family: 'Roboto', sans-serif;
+}
+
 }

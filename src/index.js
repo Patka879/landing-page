@@ -22,15 +22,15 @@ const discountSwiper = new Swiper('.swiper', {
     },
   });
   
-//   document.querySelector(".dropdown-menu-btn").addEventListener("click", function(event) {
-//     event.preventDefault()
-//     let nav = document.querySelector(".nav-top")
-//     if (nav.classList.contains("nav-top-visible")) {
-//       nav.classList.remove("nav-top-visible")
-//     } else {
-//       nav.classList.add("nav-top-visible")
-//     }
-//   })
+document.getElementById('toggle-menu-button').addEventListener("click", function(event) {
+    event.preventDefault()
+    let nav = document.querySelector(".nav-mobile-overlay")
+    if (!nav.classList.contains(".opened")) {
+        nav.style.display = "flex"
+    } else if (nav.classList.contains(".opened")) {
+        nav.style.display = "none"
+    }
+})
 
 document.querySelector(".submit-btn").addEventListener("click", function(event) {
     event.preventDefault()
