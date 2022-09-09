@@ -36,7 +36,7 @@
     }
     
     h2 {
-        font-size: 36px;
+        font-size: 20px;
         line-height: 40px;
         font-weight: 700;
     }
@@ -53,10 +53,9 @@
     
     footer {
         background-color: #E6E6E6;
-        height: 430px;
         color: #707070;
         font-family: 'Roboto', sans-serif;
-        padding: 35px 270px;
+        padding: 35px 25px;
     }
     
     .header-nav {
@@ -248,20 +247,20 @@
         background-color: #3369D3;
         color:#FFFFFF;
         border: none;
-        padding: 10px 60px;
-        margin: 180px 0 60px 0;
-        font-size: 16px;
-        width: 260px;
+        padding: 15px 40px;
+        margin: 170px 0 60px 0;
+        font-size: 14px;
+        width: 270px;
         letter-spacing: 0.9px;
     }
     
     .facts-section {
-        margin: 160px 0 190px 80px;
+        margin: 100px 0 190px 10px;
         background-color: #ffffff;
         display: grid;
-        grid-template-columns: 320px 536px 100px auto;
-        grid-template-rows: 320px 260px 60px;
-        column-gap: 16px;
+        grid-template-columns: 100px 200px;
+        grid-template-rows: 140px 80px 40px 650px;
+        gap: 10px;
     }
     
     .reveal {
@@ -276,21 +275,21 @@
     }
     
     .bmw-info-img1 {
-        grid-row: 2 / span 1;
-        width: 320px;
+        grid-row: 2 / span 2;
+        width: 100px;
     }
     
     .bmw-info-img2 {
         grid-column: 2 / span 1;
-        width: 536px;
+        width: 200px;
     }
     
     .bmw-info-box {
-        grid-column: 4;
-        grid-row: 1 / span 2;
+        grid-column: 1 / span 2;
+        grid-row: 4; 
         display: grid;
-        grid-template-columns: 190px 190px 190px;
-        grid-template-rows: 120px 220px 200px auto;
+        grid-template-columns: 320px;
+        grid-template-rows: 200px 80px 80px 80px 80px 80px;
         gap: 30px;  
     }
     
@@ -300,13 +299,17 @@
     }
     
     .bmw-info-box-title {
-        grid-column: 1 / span 3;
+        grid-column: 1;
         margin: 0;
     }
     
     .bmw-info-box-id {
         border-bottom: 1px solid #4E4E4E;
         font-size: 12px;
+    }
+
+    .bmw-info-box-text {
+        font-size: 13px;
     }
     
     .textarea {
@@ -316,15 +319,16 @@
     
     .innovation-section {
         display: grid;
-        grid-template-columns: 536px 154px 536px 320px;
-        grid-template-rows: 60px 260px 270px;
-        column-gap: 16px;
-        margin: 90px 0 90px 280px;
+        grid-template-columns: 200px 100px;
+        grid-template-rows: 60px 200px 500px;
+        gap: 10px;
+        margin: 90px 0 90px 10px;
         background-color: white;
     }
     
-    .innovation-textarea-title {
-        grid-row: 1 / span 1;
+    .innovation-textarea {
+        grid-column: 1 / span 2;
+        grid-row: 3 / span 1;
     }
     
     .subtitle {
@@ -335,25 +339,32 @@
     }
     
     .innovation-img1 {
-        width: 536px;
-        grid-column: 3 / span 1;
-        grid-row: 2;
+        width: 200px;
+        grid-column: 1;
+        grid-row: 2 / span 2;
     }
     
     .innovation-img2 {
-        grid-column: 4;
+        grid-column: 2;
         grid-row: 1;
-        width: 320px;
+        width: 100px;
     }
     
-    .gallery {
-        width: 99%;
-        margin: 90px 10px;
+    .gallery-section {
+        width: 98%;  
+        margin: 100px 10px;
+    }
+    
+    .gallery-imgs {
+        background-image: url(../public/images/gallery-mobile.png);
+        background-size: cover;
+        padding: 90px 10px;
+        height: 300px;
     }
     
     .footer-nav {
         display: flex;
-        justify-content: flex-end;
+        flex-direction: column;
         align-items: center;
         border-bottom: 1px solid #BEBEBE;
         padding-bottom: 15px;
@@ -369,24 +380,25 @@
     
     .site-map {
         display: flex;
-        justify-content: flex-start;
+        flex-direction: column;
+        justify-content: space-around;
     }
     
     .site-map-client-zone, .site-map-meet-BMW, .site-map-legal-info {
         display: flex;
         flex-direction: column;
-        margin-right: 260px;
+        margin-bottom: 40px;
     }
     
     .site-map-link {
-        font-size: 14px;
+        font-size: 12px;
         line-height: 28px;
         font-weight: bold;
     }
     
     .watermark {
         background-color: #FFFFFF;
-        padding: 10px 270px;
+        text-align: center;
         font-size: 14px;
     }
     
@@ -395,15 +407,11 @@
         height: 1200px;
         background-image: url(../public/images/tlo1.png);
         background-size: cover;
-        padding-left: 600px
     }
     
     .form-container {
         height: 850px;
-        width: 800px;
-        box-shadow: 3px 3px 60px #00000012;
-        padding: 90px;
-        background-color: #FFFFFF;
+        padding: 10px;
     }
     
     .form {
@@ -417,13 +425,24 @@
     }
     
     .input-text {
-        padding: 17px;
-        width: 500px;
+        padding: 15px;
         margin-bottom: 30px;
+        width: 250px;
     }
     
     .input-radio {
         margin-bottom: 30px;
+    }
+
+    .submit-btn, .ok-btn {
+        background-color: #3369D3;
+        color:#FFFFFF;
+        border: none;
+        padding: 15px 40px;
+        margin: 50px 0 60px 0;
+        font-size: 14px;
+        width: 150px;
+        letter-spacing: 0.9px;
     }
     
     .overlay {
@@ -442,7 +461,7 @@
     .form-overlay {
         position: fixed;
             top: 300px;
-            left: 1000px;
+            left: 20px;
         width: 250px;
         z-index: 3;
         color: white;
@@ -644,7 +663,7 @@ button {
 }
 
 .trial-btn {
-    margin: 0 0 0px 100px;
+    margin: 0 0 60px 100px;
     padding: 15px 90px;
     font-size: 18px;
     width: auto;
@@ -718,8 +737,9 @@ button {
     background-color: white;
 }
 
-.innovation-textarea-title {
-    grid-row: 1 / span 1;
+.innovation-textarea {
+    grid-row: 1 / span 3;
+    grid-column: 1
 }
 
 .subtitle {
@@ -741,13 +761,21 @@ button {
     width: 320px;
 }
 
-.gallery {
-    width: 99%;
-    margin: 90px 10px;
+.gallery-section {
+    width: 98%;  
+    margin: 100px 10px;
+}
+
+.gallery-imgs {
+    background-image: url(../public/images/gallery.png);
+    background-size: cover;
+    padding: 90px 10px;
+    height: 300px;
 }
 
 .footer-nav {
     display: flex;
+    flex-direction: row;
     justify-content: flex-end;
     align-items: center;
     border-bottom: 1px solid #BEBEBE;
@@ -764,13 +792,14 @@ button {
 
 .site-map {
     display: flex;
+    flex-direction: row;
     justify-content: flex-start;
 }
 
 .site-map-client-zone, .site-map-meet-BMW, .site-map-legal-info {
     display: flex;
     flex-direction: column;
-    margin-right: 260px;
+    margin: 0 260px 0 0;
 }
 
 .site-map-link {
@@ -783,6 +812,7 @@ button {
     background-color: #FFFFFF;
     padding: 10px 270px;
     font-size: 14px;
+    text-align: initial;
 }
 
 .form-section {
