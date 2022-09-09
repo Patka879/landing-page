@@ -16,7 +16,7 @@ const discountSwiper = new Swiper('.swiper', {
     },
   
     autoplay: {
-      delay: 2500,
+      delay: 12500,
       disableOnInteraction: false,
       pauseOnMouseEnter: true,
     },
