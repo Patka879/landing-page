@@ -300,3 +300,39 @@ button {
 .input-radio {
     margin-bottom: 30px;
 }
+
+.overlay {
+  position: fixed; 
+  width: 100%; 
+  height: 100%; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.9); 
+  z-index: 2; 
+  display: none;
+}
+
+.form-overlay {
+    position: fixed;
+        top: 300px;
+        left: 1000px;
+    width: 250px;
+    z-index: 3;
+    color: white;
+    text-align: center;
+    line-height: 24px;
+    display: none;
+}
+
+.form-overlay-title {
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+.form-overlay-note {
+    font-size: 13px;
+    margin-bottom: 60px;
+    font-family: 'Roboto', sans-serif;
+}
