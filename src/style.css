@@ -1,6 +1,5 @@
 body {
     margin: 0;
-    background-color: aqua;
     height: 100%;
     box-sizing: border-box;
     overflow-x: hidden;
@@ -158,6 +157,18 @@ button {
     column-gap: 16px;
 }
 
+.reveal {
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+
 .bmw-info-img1 {
     grid-row: 2 / span 1;
     width: 320px;
@@ -268,20 +279,22 @@ button {
 }
 
 .form-section {
-    margin: 90px 0 90px 600px;
-    background-color: #4E4E4E;
+    margin: 90px 0;
+    height: 1200px;
+    background-image: url(../public/images/tlo1.png);
+    background-size: cover;
+    padding-left: 600px
 }
 
 .form-container {
-    height: 900px;
-    width: 812px;
+    height: 850px;
+    width: 800px;
     box-shadow: 3px 3px 60px #00000012;
-    background-color: white;
-    margin-left: 100px;
     padding: 90px;
+    background-color: #FFFFFF;
 }
 
-#form {
+.form {
     margin: 90px 0;
 }
 
