@@ -1,5 +1,11 @@
 const discountSwiper = new Swiper('.swiper', {
     loop: true,
+    speed: 1000,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
+  },
+  
   
     pagination: {
       el: ".swiper-pagination",
