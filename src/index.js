@@ -39,27 +39,27 @@ hamburgerButton.addEventListener("click", function(event) {
 })
 
 document.querySelector(".nav-mobile-btn").addEventListener("click", function(event) {
-    event.preventDefault()
-    mobileOverlay.style.display = "none";
-    hamburgerButton.classList.remove('active')
+  event.preventDefault()
+  mobileOverlay.style.display = "none";
+  hamburgerButton.classList.remove('active')
 })
 
 document.querySelector(".nav-mobile-link").addEventListener("click", function(event) {
-    event.preventDefault()
-    mobileOverlay.style.display = "none";
-    hamburgerButton.classList.remove('active')
+  event.preventDefault()
+  mobileOverlay.style.display = "none";
+  hamburgerButton.classList.remove('active')
 })
 
 document.querySelector(".submit-btn").addEventListener("click", function(event) {
-    event.preventDefault()
-    overlay.style.display = "block";
-    formOverlay.style.display = "block";
+  event.preventDefault()
+  overlay.style.display = "block";
+  formOverlay.style.display = "block";
 })
 
 document.querySelector(".ok-btn").addEventListener("click", function(event) {
-    event.preventDefault()
-    overlay.style.display = "none";
-    formOverlay.style.display = "none";
+  event.preventDefault()
+  overlay.style.display = "none";
+  formOverlay.style.display = "none";
 })
 
 function reveal() {

@@ -320,11 +320,6 @@ footer {
     gap: 1fr;  
 }
 
-.svg-el {
-    width: 300px;
-    height: 30px;
-}
-
 .bmw-info-box-title {
     grid-column: 1;
 }
@@ -566,7 +561,7 @@ footer {
     }
     .trial-btn {
         font-size: 18px;
-        padding: 15px 90px;
+        padding: 30px 90px;
     }
     .bmw-info-box-id {
         font-size: 22px;
@@ -702,7 +697,7 @@ footer {
         grid-row: 1 / span 2;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 12fr 22fr 20fr;
-        gap: 1fr;  
+        gap: 30px;  
     }
     .bmw-info-box-title {
         grid-column: 1 / span 3;
@@ -821,6 +816,12 @@ footer {
         font-size: 14px;
         text-align: start;
         margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .form-section {
+        padding-left: 20%;
     }
 }
 
