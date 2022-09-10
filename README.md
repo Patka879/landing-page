@@ -10,7 +10,6 @@ This page was created as a part of recruitment process task. Project was based o
 Project is created with:
 * JavaScript
 * HTML
-* SCSS
 * flexbox / grid
 * swiper.js
 ## Setup 
@@ -18,14 +17,12 @@ To start this project locally:
 
 Clone the repository:
 ```
-$ git clone git@github.com:Patka879/restaurant.git 
+$ git clone git@github.com:Patka879/landing-page.git 
 ```
 Install dependencies:
 ```
 $ npm install
 ```
 Run the project:
-```
-$ npm run start
-```
+ś
 Go to the directory of the project, open public folder and open HTML file in the browser.
