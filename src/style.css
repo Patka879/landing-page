@@ -8,6 +8,12 @@ body {
     font-family: 'Cairo', sans-serif;
 }
 
+sup {
+    font-size: 18px;
+    margin: 10px;
+    font-weight: 700;
+}
+
 a {
     cursor: pointer;
     text-decoration: none;
