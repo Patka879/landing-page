@@ -1,526 +1,10 @@
 
-    body {
-        width: 100vw;
-        height: 100vh;
-        margin: 0;
-    }
-
-    header {
-        height: 864px;
-        font-family: 'Cairo', sans-serif;
-    }
-    
-    a {
-        cursor: pointer;
-        text-decoration: none;
-    }
-    
-    button {
-        cursor: pointer;
-    }
-    
-    a:hover, button:hover {
-      transform: scale(1.02);
-      transition: all 100ms;
-    }
-    
-    a:active, button:active {
-        transform: scale(0.99);
-        transition: all 100ms;
-    }
-    
-    h1 {
-        font-size: 48px;
-        margin: 0;
-        line-height: 56px;
-    }
-    
-    h2 {
-        font-size: 20px;
-        line-height: 40px;
-        font-weight: 700;
-    }
-
-    h3 {
-        font-size: 24px;
-        line-height: 28px;
-        font-weight: bold;
-        margin: 0 ;
-        font-family: 'Cairo', sans-serif;
-    }
-    
-    h4 {
-        font-size: 16px;
-        margin-top: 10px;
-    }
-    
-    label {
-        font-size: 16px;
-        color: #707070;
-    }
-    
-    footer {
-        background-color: #E6E6E6;
-        color: #707070;
-        font-family: 'Roboto', sans-serif;
-        padding: 35px 25px;
-    }
-    
-    .header-nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: white;
-        text-shadow: 0px 0px 20px #242424;
-        padding: 0px 10px;
-        position: relative;
-        z-index: 100;
-    }
-
-    .hamburger-button {
-        cursor: pointer;
-        display: flex;
-        z-index: 120;
-      }
-      svg {
-        transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      .active svg {
-        transform: rotate(90deg);
-      }
-      path {
-        transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1),
-          stroke-dasharray 500ms cubic-bezier(0.4, 0, 0.2, 1),
-          stroke-dashoffset 500ms cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      path:nth-child(1) {
-        transform-origin: 36% 40%;
-      }
-      path:nth-child(2) {
-        stroke-dasharray: 29 299;
-      }
-      path:nth-child(3) {
-        transform-origin: 35% 63%;
-      }
-      path:nth-child(4) {
-        stroke-dasharray: 29 299;
-      }
-      path:nth-child(5) {
-        transform-origin: 61% 52%;
-      }
-      path:nth-child(6) {
-        transform-origin: 62% 52%;
-      }
-      .active path:nth-child(1) {
-        transform: translateX(9px) translateY(1px) rotate(45deg);
-      }
-      .active path:nth-child(2) {
-        stroke-dasharray: 225 299;
-        stroke-dashoffset: -72px;
-      }
-      .active path:nth-child(3) {
-        transform: translateX(9px) translateY(1px) rotate(-45deg);
-      }
-      .active path:nth-child(4) {
-        stroke-dasharray: 225 299;
-        stroke-dashoffset: -72px;
-      }
-      .active path:nth-child(5) {
-        transform: translateX(9px) translateY(1px) rotate(-45deg);
-      }
-      .active path:nth-child(6) {
-        transform: translateX(9px) translateY(1px) rotate(45deg);
-      }
-   
-
-    .nav-mobile-overlay {
-        position: fixed; 
-        display: none;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding-top: 160px;
-        width: 100vw; 
-        height: 764px; 
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgb(0, 0, 0); 
-        z-index: 4; 
-    }
-
-    .nav-mobile-link {
-        border-bottom: 1px solid #343434;
-        color: white;
-        margin-bottom: 30px;
-        font-size: 16px;
-        padding-bottom: 30px;
-        width: 250px;
-        text-align: center;
-    }
-
-    .nav-mobile-btn {
-        background-color: #3369D3;
-        color:#FFFFFF;
-        border: none;
-        font-size: 14px;
-        height: 80px;
-        margin-top: 100px;
-        letter-spacing: 0.9px;
-        width: 270px;
-    }
-    
-    .nav-left {
-        display: none;
-        margin: 0;
-    }
-    
-    .nav-left-top {
-        display: flex;
-        border-bottom: 1px solid rgba(255, 255, 255, .25);
-        padding: 0px 800px 30px 0; 
-    }
-    
-    .nav-link { 
-        margin-right: 60px;
-        color:#FFFFFF;
-        font-size: 18px;
-    }
-    
-    .nav-left-bottom {
-        display: flex;
-        justify-content: flex-end;
-    }
-    
-    .logo {
-        height: 40px;
-        margin-right: 20px;
-        z-index: 120;
-    }
-    
-    .swiper {
-        width: 100vw;
-        height: 720px;
-        position: absolute;
-            top: 0;
-        z-index: 10;
-    }
-    
-    .swiper-slide {
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color:#FFFFFF;
-        background-size: cover; 
-    }
-    
-    #slide1 {
-        background-image:
-        linear-gradient(90deg, #000000a8 0%, #00000000 100%),
-        url(../public/images/header-img.png)
-    }
-    
-    #slide2 {
-        background-image:
-        linear-gradient(90deg, #000000a8 0%, #00000000 100%),
-        url(../public/images/header-img2.jpg);
-    }
-    
-    #slide3 {
-        background-image:
-        linear-gradient(90deg, #000000a8 0%, #00000000 100%),
-        url(../public/images/header-img3.jpg);
-    }
-    
-    .swiper-slide-left {
-        display: flex;
-        flex-direction: column;
-        align-self: flex-start;
-        margin: 150px 0 0 20px;
-    }
-    
-    .swiper-pagination {
-        position: absolute;
-        width: auto !important;
-        margin: 0 0 60px 90px;
-    }
-    .swiper-pagination-bullet {
-        border-radius: 0;
-        width: 40px;
-        height: 5px;
-        text-align: center;
-        color:#000;
-        opacity: 1;
-        background: #FFFFFF;
-    }
-    .swiper-pagination-bullet-active {
-        color:#ffffff;
-        background: #3369D3;
-        height: 3.33px;
-    }
-    
-    .slider-bmw-logo {
-        width: 32px;
-        margin-bottom: 20px;
-    }
-    
-    .trial-btn {
-        background-color: #3369D3;
-        color:#FFFFFF;
-        border: none;
-        padding: 15px 40px;
-        margin: 170px 0 60px 0;
-        font-size: 14px;
-        width: 270px;
-        letter-spacing: 0.9px;
-    }
-    
-    .facts-section {
-        background-color: #ffffff;
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 8fr 7fr 2fr 30fr;
-        gap: 10px;
-        font-family: 'Cairo', sans-serif;
-    }
-    
-    .reveal {
-        transform: translateY(150px);
-        opacity: 0;
-        transition: 2s all ease;
-    }
-    
-    .reveal.active{
-        transform: translateY(0);
-        opacity: 1;
-    }
-    
-    .bmw-info-img1 {
-        grid-row: 2;
-        width: 100%;
-    }
-    
-    .bmw-info-img2 {
-        grid-column: 2 / span 1;
-        grid-row: 1 / span 2;
-        width: 100%;
-    }
-    
-    .bmw-info-box {
-        grid-column: 1 / span 2;
-        grid-row: 4; 
-        margin: 0 32px;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 7fr 5fr 6fr 5fr 5fr 5fr;
-        gap: 1fr;  
-    }
-    
-    .svg-el {
-        width: 300px;
-        height: 30px;
-    }
-    
-    .bmw-info-box-title {
-        grid-column: 1;
-    }
-    
-    .bmw-info-box-id {
-        border-bottom: 1px solid #4E4E4E;
-        font-size: 12px;
-        font-weight: 700;
-    }
-
-    .bmw-info-box-text {
-        font-size: 13px;
-        color: #4E4E4E;
-    }
-    
-    .textarea {
-        color: #4E4E4E;
-        font-size: 14px;
-        line-height: 24px;
-    }
-    
-    .innovation-section {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: 6fr 40fr 56fr;
-        gap: 10px;
-        margin: 90px 0;
-        background-color: white;
-    }
-    
-    .innovation-textarea {
-        margin: 0 32px;
-        grid-column: 1 / span 2;
-        grid-row: 3 / span 1;
-    }
-    
-    .subtitle {
-        color: #707070;
-        font-size: 16px;
-        font-family: 'Open Sans', sans-serif;
-        line-height: 24px;
-    }
-    
-    .innovation-img1 {
-        width: 100%;
-        grid-column: 1;
-        grid-row: 2 / span 2;
-    }
-    
-    .innovation-img2 {
-        grid-column: 2;
-        grid-row: 1 / span 2;
-        width: 100%;
-    }
-    
-    .gallery-section {
-        width: 96%;  
-        margin: 100px 10px;
-    }
-    
-    .gallery-imgs {
-        background-image: url(../public/images/gallery-mobile.png);
-        background-size: cover;
-        padding: 90px 10px;
-        height: 300px;
-    }
-    
-    .footer-nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border-bottom: 1px solid #BEBEBE;
-        padding-bottom: 15px;
-        margin-bottom: 40px;
-        font-size: 20px;
-    }
-    
-    .social-icon {
-        width: 32px;
-        height: 32px; 
-        margin-left: 20px;  
-    }
-    
-    .site-map {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-    
-    .site-map-client-zone, .site-map-meet-BMW, .site-map-legal-info {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 40px;
-    }
-    
-    .site-map-link {
-        font-size: 12px;
-        line-height: 28px;
-        font-weight: bold;
-    }
-    
-    .watermark {
-        background-color: #FFFFFF;
-        text-align: center;
-        font-size: 14px;
-    }
-    
-    .form-section {
-        margin: 90px 32px;;
-        background-image: url(../public/images/tlo1.png);
-        background-size: cover;
-    }
-    
-    .form-container {
-        height: 850px;
-        padding: 10px;
-    }
-    
-    .form {
-        margin: 90px 0;
-    }
-    
-    .form-title {
-        font-size: 20px;
-        font-family: 'Cairo', sans-serif;
-        font-weight: 700;
-    }
-    
-    .input-text {
-        padding: 15px;
-        margin-bottom: 30px;
-        width: 250px;
-        font-size: 13px;
-    }
-    
-    .input-radio {
-        margin-bottom: 30px;
-    }
-
-    .submit-btn, .ok-btn {
-        background-color: #3369D3;
-        color:#FFFFFF;
-        border: none;
-        padding: 15px 40px;
-        margin: 20px 0 60px 0;
-        font-size: 14px;
-        width: 150px;
-        letter-spacing: 0.9px;
-    }
-    
-    .overlay {
-      position: fixed; 
-      width: 100%; 
-      height: 100%; 
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0,0,0,0.9); 
-      z-index: 2; 
-      display: none;
-    }
-    
-    .form-overlay {
-        position: fixed;
-            top: 300px;
-            left: 20px;
-        width: 250px;
-        z-index: 3;
-        color: white;
-        text-align: center;
-        line-height: 24px;
-        display: none;
-    }
-    
-    .form-overlay-title {
-        font-size: 20px;
-        margin-bottom: 30px;
-        font-weight: 600;
-    }
-    .form-overlay-note {
-        font-size: 13px;
-        margin-bottom: 60px;
-        font-family: 'Roboto', sans-serif;
-    }
- 
-@media (min-width: 768px) {
-
 body {
+    width: 100vw;
+    height: 100vh;
     margin: 0;
-    height: 100%;
     box-sizing: border-box;
     overflow-x: hidden;
-    font-family: 'Cairo', sans-serif;
-}
-
-header {
-    height: 864px;
     font-family: 'Cairo', sans-serif;
 }
 
@@ -531,11 +15,15 @@ a {
 
 button {
     cursor: pointer;
+    background-color: #3369D3;
+    color:#FFFFFF;
+    border: none;
+    letter-spacing: 0.9px;
 }
 
 a:hover, button:hover {
-  transform: scale(1.02);
-  transition: all 100ms;
+    transform: scale(1.02);
+    transition: all 100ms;
 }
 
 a:active, button:active {
@@ -544,14 +32,23 @@ a:active, button:active {
 }
 
 h1 {
-    font-size: 64px;
+    font-size: 48px;
     margin: 0;
+    line-height: 56px;
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 20px;
     line-height: 40px;
     font-weight: 700;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: bold;
+    margin: 0 ;
+    font-family: 'Cairo', sans-serif;
 }
 
 h4 {
@@ -559,54 +56,132 @@ h4 {
     margin-top: 10px;
 }
 
+header {
+    height: 840px;
+}
+
 label {
-    font-size: 20px;
+    font-size: 16px;
     color: #707070;
 }
 
 footer {
     background-color: #E6E6E6;
-    height: 430px;
     color: #707070;
     font-family: 'Roboto', sans-serif;
-    padding: 35px 270px;
-}
-
-button {
-    background-color: #3369D3;
-    padding: 15px 90px;
-    color:#FFFFFF;
-    border: none;
-    font-size: 18px;
-    height: 80px;
-    letter-spacing: 0.9px;
+    padding: 35px 32px;
 }
 
 .header-nav {
     display: flex;
-    justify-content: initial;
-    align-items: initial;
+    justify-content: space-between;
+    align-items: center;
     color: white;
     text-shadow: 0px 0px 20px #242424;
-    margin: 0 280px;
-    padding: 30px 0 0 0;
+    padding: 0px 10px;
     position: relative;
     z-index: 100;
 }
 
-.hamburger-button { 
+.hamburger-btn {
+    display: flex;
+    z-index: 120;
+    }
+    svg {
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .active svg {
+    transform: rotate(90deg);
+    }
+    path {
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dasharray 500ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    path:nth-child(1) {
+    transform-origin: 36% 40%;
+    }
+    path:nth-child(2) {
+    stroke-dasharray: 29 299;
+    }
+    path:nth-child(3) {
+    transform-origin: 35% 63%;
+    }
+    path:nth-child(4) {
+    stroke-dasharray: 29 299;
+    }
+    path:nth-child(5) {
+    transform-origin: 61% 52%;
+    }
+    path:nth-child(6) {
+    transform-origin: 62% 52%;
+    }
+    .active path:nth-child(1) {
+    transform: translateX(9px) translateY(1px) rotate(45deg);
+    }
+    .active path:nth-child(2) {
+    stroke-dasharray: 225 299;
+    stroke-dashoffset: -72px;
+    }
+    .active path:nth-child(3) {
+    transform: translateX(9px) translateY(1px) rotate(-45deg);
+    }
+    .active path:nth-child(4) {
+    stroke-dasharray: 225 299;
+    stroke-dashoffset: -72px;
+    }
+    .active path:nth-child(5) {
+    transform: translateX(9px) translateY(1px) rotate(-45deg);
+    }
+    .active path:nth-child(6) {
+    transform: translateX(9px) translateY(1px) rotate(45deg);
+    }
+
+.nav-mobile-overlay {
+    position: fixed; 
     display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 160px;
+    width: 100vw; 
+    height: 764px; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0); 
+    z-index: 4; 
+}
+
+.nav-mobile-link {
+    border-bottom: 1px solid #343434;
+    color: white;
+    margin-bottom: 30px;
+    font-size: 16px;
+    padding-bottom: 30px;
+    width: 250px;
+    text-align: center;
+}
+
+.nav-mobile-btn {
+    border: none;
+    font-size: 14px;
+    height: 80px;
+    margin-top: 100px;
+    width: 270px;
 }
 
 .nav-left {
-    display: block;
-    margin-right: 40px;
+    display: none;
+    margin: 0;
 }
 
 .nav-left-top {
     display: flex;
+    justify-content:flex-start;
     border-bottom: 1px solid rgba(255, 255, 255, .25);
-    padding: 0px 800px 30px 0; 
+    padding: 0px 500px 30px 0; 
 }
 
 .nav-link { 
@@ -621,12 +196,14 @@ button {
 }
 
 .logo {
-    height: 52px;
+    width: 12%;
+    margin-right: 20px;
+    z-index: 120;
 }
 
 .swiper {
-    width: 100%;
-    height: 864px;
+    width: 100vw;
+    height: 720px;
     position: absolute;
         top: 0;
     z-index: 10;
@@ -634,8 +211,9 @@ button {
 
 .swiper-slide {
     margin: 0;
-    flex-direction: row;
-    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color:#FFFFFF;
     background-size: cover; 
 }
@@ -643,8 +221,7 @@ button {
 #slide1 {
     background-image:
     linear-gradient(90deg, #000000a8 0%, #00000000 100%),
-    url(../public/images/header-img.png); 
-    background-size: cover; 
+    url(../public/images/header-img.png)
 }
 
 #slide2 {
@@ -663,47 +240,52 @@ button {
     display: flex;
     flex-direction: column;
     align-self: flex-start;
-    margin: 340px 0 0 280px;
+    margin: 150px 0 0 20px;
 }
 
 .swiper-pagination {
-	position: absolute;
-	width: auto !important;
-	margin: 0 0 60px 280px;
+    position: absolute;
+    width: auto !important;
+    margin: 0 0 60px 90px;
 }
 .swiper-pagination-bullet {
-	border-radius: 0;
-	width: 60px;
-	height: 5px;
-	text-align: center;
-	color:#000;
-	opacity: 1;
-	background: #FFFFFF;
+    border-radius: 0;
+    width: 40px;
+    height: 5px;
+    text-align: center;
+    color:#000;
+    opacity: 1;
+    background: #FFFFFF;
 }
 .swiper-pagination-bullet-active {
-	color:#ffffff;
-	background: #3369D3;
-    height: 5px;
+    color:#ffffff;
+    background: #3369D3;
+    height: 3.33px;
 }
 
 .slider-bmw-logo {
-    width: 80px;
+    width: 20%;
+    margin-bottom: 20px;
+}
+
+.trial-link {
+    width: 80%;
 }
 
 .trial-btn {
-    margin: 0 0 60px 100px;
-    padding: 15px 90px;
-    font-size: 18px;
-    width: auto;
+    padding: 15px 40px;
+    margin-top: 170px;
+    font-size: 14px;
+    width: 100%;
 }
 
 .facts-section {
-    margin: 160px 0 190px 80px;
     background-color: #ffffff;
     display: grid;
-    grid-template-columns: 320px 536px 100px auto;
-    grid-template-rows: 320px 260px 60px;
-    column-gap: 16px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 8fr 7fr 2fr 30fr;
+    gap: 10px;
+    font-family: 'Cairo', sans-serif;
 }
 
 .reveal {
@@ -718,22 +300,24 @@ button {
 }
 
 .bmw-info-img1 {
-    grid-row: 2 / span 1;
-    width: 320px;
+    grid-row: 2;
+    width: 100%;
 }
 
 .bmw-info-img2 {
     grid-column: 2 / span 1;
-    width: 536px;
+    grid-row: 1 / span 2;
+    width: 100%;
 }
 
 .bmw-info-box {
-    grid-column: 4;
-    grid-row: 1 / span 2;
+    grid-column: 1 / span 2;
+    grid-row: 4; 
+    margin: 0 32px;
     display: grid;
-    grid-template-columns: 190px 190px 190px;
-    grid-template-rows: 120px 220px 200px auto;
-    gap: 30px;  
+    grid-template-columns: 1fr;
+    grid-template-rows: 7fr 5fr 6fr 5fr 5fr 5fr;
+    gap: 1fr;  
 }
 
 .svg-el {
@@ -742,121 +326,79 @@ button {
 }
 
 .bmw-info-box-title {
-    grid-column: 1 / span 3;
-    margin: 0;
+    grid-column: 1;
 }
 
 .bmw-info-box-id {
     border-bottom: 1px solid #4E4E4E;
     font-size: 12px;
+    font-weight: 700;
+}
+
+.bmw-info-box-text {
+    font-size: 13px;
+    color: #4E4E4E;
 }
 
 .textarea {
     color: #4E4E4E;
     font-size: 14px;
+    line-height: 24px;
 }
 
 .innovation-section {
     display: grid;
-    grid-template-columns: 536px 154px 536px 320px;
-    grid-template-rows: 60px 260px 270px;
-    column-gap: 16px;
-    margin: 90px 0 90px 280px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 6fr 40fr 56fr;
+    gap: 10px;
+    margin: 90px 0;
     background-color: white;
 }
 
 .innovation-textarea {
-    grid-row: 1 / span 3;
-    grid-column: 1
+    margin: 0 32px;
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 1;
 }
 
 .subtitle {
     color: #707070;
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Open Sans', sans-serif;
-    line-height: 32px;
+    line-height: 24px;
 }
 
 .innovation-img1 {
-    width: 536px;
-    grid-column: 3 / span 1;
-    grid-row: 2;
+    width: 100%;
+    grid-column: 1;
+    grid-row: 2 / span 2;
 }
 
 .innovation-img2 {
-    grid-column: 4;
-    grid-row: 1;
-    width: 320px;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    width: 100%;
 }
 
 .gallery-section {
-    width: 98%;  
+    width: 96%;  
     margin: 100px 10px;
 }
 
 .gallery-imgs {
-    background-image: url(../public/images/gallery.png);
+    background-image: url(../public/images/gallery-mobile.png);
     background-size: cover;
     padding: 90px 10px;
-    height: 300px;
-}
-
-.footer-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    border-bottom: 1px solid #BEBEBE;
-    padding-bottom: 15px;
-    margin-bottom: 40px;
-    font-size: 20px;
-}
-
-.social-icon {
-    width: 32px;
-    height: 32px; 
-    margin-left: 20px;  
-}
-
-.site-map {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-}
-
-.site-map-client-zone, .site-map-meet-BMW, .site-map-legal-info {
-    display: flex;
-    flex-direction: column;
-    margin: 0 260px 0 0;
-}
-
-.site-map-link {
-    font-size: 14px;
-    line-height: 28px;
-    font-weight: bold;
-}
-
-.watermark {
-    background-color: #FFFFFF;
-    padding: 10px 270px;
-    font-size: 14px;
-    text-align: initial;
+    height: 420px;
 }
 
 .form-section {
-    margin: 90px 0;
-    height: 1200px;
+    margin: 90px 32px;;
     background-image: url(../public/images/tlo1.png);
-    background-size: cover;
-    padding-left: 600px
 }
 
 .form-container {
-    height: 850px;
-    width: 800px;
-    box-shadow: 3px 3px 60px #00000012;
-    padding: 90px;
-    background-color: #FFFFFF;
+    padding: 10px;
 }
 
 .form {
@@ -867,35 +409,45 @@ button {
     font-size: 20px;
     font-family: 'Cairo', sans-serif;
     font-weight: 700;
+    margin-bottom: 50px;
 }
 
 .input-text {
-    padding: 17px;
-    width: 500px;
+    padding: 15px;
     margin-bottom: 30px;
+    width: 250px;
+    font-size: 13px;
+    border: 1px solid #70707026
 }
 
 .input-radio {
     margin-bottom: 30px;
 }
 
+.submit-btn, .ok-btn {
+    padding: 15px 40px;
+    margin: 20px 0 60px 0;
+    font-size: 14px;
+    width: 160px;
+}
+
 .overlay {
-  position: fixed; 
-  width: 100%; 
-  height: 100%; 
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.9); 
-  z-index: 2; 
-  display: none;
+    position: fixed; 
+    width: 100%; 
+    height: 100%; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.9); 
+    z-index: 2000; 
+    display: none;
 }
 
 .form-overlay {
     position: fixed;
-        top: 300px;
-        left: 1000px;
+        top: 30%;
+        left: 18%;
     width: 250px;
     z-index: 3;
     color: white;
@@ -909,10 +461,417 @@ button {
     margin-bottom: 30px;
     font-weight: 600;
 }
+
 .form-overlay-note {
     font-size: 13px;
     margin-bottom: 60px;
     font-family: 'Roboto', sans-serif;
 }
 
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid #BEBEBE;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+.footer-title {
+    font-size: 20px;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px; 
+    margin-right: 10px;  
+}
+
+.site-map {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.site-map-client-zone, .site-map-meet-BMW, .site-map-legal-info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.site-map-link {
+    font-size: 12px;
+    line-height: 28px;
+    font-weight: bold;
+}
+
+.watermark {
+    background-color: #FFFFFF;
+    text-align: center;
+    font-size: 14px;
+}
+    
+
+@media (min-width: 481px) {
+    .header-nav {
+        padding: 0 20px;
+    } 
+    .swiper-slide-left {
+        margin: 180px 0 0 40px;
+    }
+    .swiper-pagination {
+        margin: 0 0 60px 150px;
+    }
+    .trial-link {
+        width: 70%;
+    }
+    .innovation-section {
+        grid-template-rows: 6fr 60fr 56fr;
+    }
+    .gallery-imgs {
+        background-image: url(../public/images/gallery-mobile.png);
+        background-size: cover;
+        padding: 90px 10px;
+        height: 610px;
+    }
+}
+ 
+@media (min-width: 618px) {
+    h3 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+    .header-nav {
+        padding: 20px 20px;
+    }
+    .nav-mobile-overlay {
+        padding-top: 220px;
+    }
+    .nav-mobile-link {
+        font-size: 20px;
+        width: 300px;
+        margin-bottom: 40px;
+        padding-bottom: 35px;
+    }
+    .nav-mobile-btn {
+        font-size: 18px;
+        width: 300px;
+    }
+    .swiper-slide-left {
+        margin: 200px 0 0 60px;
+    }
+    .swiper-pagination {
+        margin: 0 0 40px 230px;
+    }
+    .trial-btn {
+        font-size: 18px;
+        padding: 15px 90px;
+    }
+    .bmw-info-box-id {
+        font-size: 22px;
+    }
+    .bmw-info-box-text {
+        font-size: 20px;
+    }
+    .innovation-section {
+        grid-template-rows: 6fr 74fr 56fr;
+    }
+    .gallery-imgs {
+        height: 820px;
+    }
+    .subtitle {
+       font-size: 20px;
+       line-height: 32px;
+    }
+    .site-map-link {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 769px) {
+    label {
+        font-size: 30px;
+        margin-right: 25px;
+    }
+    .input-text {
+        width: 500px; 
+        padding: 30px;
+        font-size: 22px;
+        margin: 40px 0;
+    }
+    .innovation-section {
+        grid-template-rows: 6fr 98fr 56fr;
+    }
+    .form-section {
+        margin: 200px 32px;
+        background-image: url(../public/images/tlo1.png);
+    }
+    .submit-btn, .ok-btn {
+        width: 400px;
+        padding: 30px 0;
+        font-size: 22px;
+        margin-top: 40px;
+    }
+    .form-overlay {
+        width: 400px;
+        left: 30%;
+    }
+    .form-overlay-title {
+        font-size: 50px;
+    }
+    .form-overlay-note {
+        font-size: 20px;
+    }
+    .site-map-link {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .subtitle {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .footer-title {
+        font-size: 30px;
+    }
+    .gallery-imgs {
+        height: 1200px;
+    }
+}
+
+
+@media (min-width: 1200px) { 
+    body {
+        height: 100%;
+        width: 100%;
+    }
+    footer { 
+        height: 470px;
+    }
+    .header-nav {
+        justify-content: initial;
+        align-items: initial;
+        margin: 0 100px;
+        padding: 30px 0 0 0;
+    }
+    .hamburger-btn { 
+        display: none;
+    }
+    .nav-left {
+        display: block;
+        margin-right: 40px;
+        width: 100%;
+    }
+    .logo {
+        width: 4%;
+        height: 4%;
+    }
+    .swiper { 
+        width: 100%;
+    }
+    .swiper-slide {
+        flex-direction: row;
+        align-items: flex-end; 
+    }
+    .swiper-slide-left {
+        margin: 180px 0 0 100px;
+    }
+    .swiper-pagination {
+        margin: 0 0 60px 100px;
+    }
+    .swiper-pagination-bullet {
+        width: 60px;
+        text-align: center;
+    }
+    .swiper-pagination-bullet-active {
+        height: 5px;
+        background: #3369D3;
+    }
+    .trial-btn {
+        margin: 0 0 60px 100px;
+        width: auto;
+    }
+    .facts-section {
+        margin: 100px 0 100px 80px;
+        grid-template-columns: 4fr 6fr 1fr 10fr;
+        grid-template-rows: 3fr 3fr 1fr;
+        column-gap: 16px;
+    }
+    .bmw-info-box {
+        grid-column: 4;
+        grid-row: 1 / span 2;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 12fr 22fr 20fr;
+        gap: 1fr;  
+    }
+    .bmw-info-box-title {
+        grid-column: 1 / span 3;
+        margin: 0;
+    }
+    .bmw-info-box-id {
+        font-size: 12px;
+    }
+    .bmw-info-box-text {
+        font-size: 14px;
+    }
+    .textarea {
+        font-size: 14px;
+    }
+    .innovation-section {
+        grid-template-columns: 7fr 1fr 6fr 5fr;
+        grid-template-rows: 1fr 4fr 1fr;
+        column-gap: 16px;
+        margin: 40px 0 40px 100px;
+    }
+    .innovation-textarea {
+        grid-row: 2 / span 2;
+        grid-column: 1;
+        margin: 0;
+    }
+    .innovation-img1 {
+        grid-column: 3 / span 1;
+        grid-row: 2;
+    }
+    .innovation-img2 {
+        grid-column: 4;
+        grid-row: 1 / span 2;
+    }
+    .gallery-section {
+        width: 98%;  
+        margin: 100px 10px;
+    }
+    .gallery-imgs {
+        background-image: url(../public/images/gallery.png);
+        height: 300px;
+    }
+    .form-section {
+        margin: 90px 0;
+        height: 1200px;
+        background-size: cover;
+        padding-left: 10%;
+    }
+    .form-container {
+        height: 850px;
+        width: 800px;
+        box-shadow: 3px 3px 60px #00000012;
+        padding: 90px;
+        background-color: #FFFFFF;
+    }
+    .form {
+        margin: 90px 0;
+    }
+    .form-title {
+        margin-bottom: 20px;
+    }
+    .input-text {
+        padding: 17px;
+        width: 500px;
+        margin: 15px 0;
+        font-size: 14px;
+    }
+    .input-radio {
+        margin-bottom: 30px;
+    }
+    .form-overlay {
+        left: 40%;
+        width: 250px;
+    }
+    .form-overlay-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    .form-overlay-note {
+        font-size: 13px;
+        margin-bottom: 60px;
+        font-family: 'Roboto', sans-serif;
+    }
+    .submit-btn, .ok-btn {
+        width: 250px;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    .footer-nav {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .footer-title {
+        font-size: 20px;
+    }
+    .subtitle {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .social-icon {
+        margin: 0 0 0 20px;  
+    }
+    .site-map {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .site-map-client-zone, .site-map-meet-BMW, .site-map-legal-info {
+        margin: 0 220px 0 0;
+    }
+    .site-map-link {
+        font-size: 14px;
+        line-height: 28px;
+    }
+    .watermark {
+        padding: 10px 270px;
+        font-size: 14px;
+        text-align: start;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 1720px) {
+    header {
+        height: 864px;
+        font-family: 'Cairo', sans-serif;
+    }
+    h1 {
+        font-size: 64px;
+        margin: 0;
+    }
+    h2 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+    footer {
+        height: 430px;
+        padding: 35px 270px;
+    }
+    label {
+        font-size: 20px;
+    }
+    .header-nav { 
+        margin: 0 280px;
+    }
+    .nav-left-top { 
+        padding: 0px 800px 30px 0;
+    }
+    .nav-link { 
+        font-size: 18px; 
+    }
+    .swiper {
+        height: 864px;
+    }
+    .swiper-slide-left {
+        margin: 340px 0 0 280px;
+    }
+    .swiper-pagination {
+        margin: 0 0 60px 280px;
+    }
+    .slider-bmw-logo {
+        width: 80px;
+    }
+    .facts-section {
+        margin: 160px 0 190px 80px;
+    }
+    .form-section {
+        padding-left: 600px
+    }
+    .innovation-section {
+        margin: 90px 0 90px 280px;
+    }
 }

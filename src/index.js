@@ -1,4 +1,4 @@
-const hamburgerButton = document.querySelector('.hamburger-button')
+const hamburgerButton = document.querySelector('.hamburger-btn')
 const mobileOverlay = document.querySelector(".nav-mobile-overlay")
 const overlay = document.querySelector(".overlay")
 const formOverlay = document.querySelector(".form-overlay")
