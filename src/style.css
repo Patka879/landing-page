@@ -90,6 +90,7 @@ footer {
 }
 
 .hamburger-btn {
+    cursor: pointer;
     display: flex;
     z-index: 120;
     }
