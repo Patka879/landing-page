@@ -1,3 +1,9 @@
+const hamburgerButton = document.querySelector('.hamburger-button')
+const mobileOverlay = document.querySelector(".nav-mobile-overlay")
+const overlay = document.querySelector(".overlay")
+const formOverlay = document.querySelector(".form-overlay")
+
+
 const discountSwiper = new Swiper('.swiper', {
     loop: true,
     speed: 1000,
@@ -22,26 +28,38 @@ const discountSwiper = new Swiper('.swiper', {
     },
   });
   
-document.getElementById('toggle-menu-button').addEventListener("click", function(event) {
+hamburgerButton.addEventListener("click", function(event) {
     event.preventDefault()
-    let nav = document.querySelector(".nav-mobile-overlay")
-    if (!nav.classList.contains(".opened")) {
-        nav.style.display = "flex"
-    } else if (nav.classList.contains(".opened")) {
-        nav.style.display = "none"
+    this.classList.toggle('active')
+    if (hamburgerButton.classList.contains('active')) {
+        mobileOverlay.style.display = "flex" 
+    } else {
+        mobileOverlay.style.display = "none"
     }
+})
+
+document.querySelector(".nav-mobile-btn").addEventListener("click", function(event) {
+    event.preventDefault()
+    mobileOverlay.style.display = "none";
+    hamburgerButton.classList.remove('active')
+})
+
+document.querySelector(".nav-mobile-link").addEventListener("click", function(event) {
+    event.preventDefault()
+    mobileOverlay.style.display = "none";
+    hamburgerButton.classList.remove('active')
 })
 
 document.querySelector(".submit-btn").addEventListener("click", function(event) {
     event.preventDefault()
-    document.querySelector(".overlay").style.display = "block";
-    document.querySelector(".form-overlay").style.display = "block";
+    overlay.style.display = "block";
+    formOverlay.style.display = "block";
 })
 
 document.querySelector(".ok-btn").addEventListener("click", function(event) {
     event.preventDefault()
-    document.querySelector(".overlay").style.display = "none";
-    document.querySelector(".form-overlay").style.display = "none";
+    overlay.style.display = "none";
+    formOverlay.style.display = "none";
 })
 
 function reveal() {

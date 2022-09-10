@@ -40,6 +40,14 @@
         line-height: 40px;
         font-weight: 700;
     }
+
+    h3 {
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: bold;
+        margin: 0 ;
+        font-family: 'Cairo', sans-serif;
+    }
     
     h4 {
         font-size: 16px;
@@ -47,7 +55,7 @@
     }
     
     label {
-        font-size: 20px;
+        font-size: 16px;
         color: #707070;
     }
     
@@ -64,53 +72,66 @@
         align-items: center;
         color: white;
         text-shadow: 0px 0px 20px #242424;
-        padding: 30px;
+        padding: 0px 10px;
         position: relative;
         z-index: 100;
     }
 
-    .menu {
+    .hamburger-button {
+        cursor: pointer;
         display: flex;
-        align-items: center;
-        flex-direction: column;
-        background-color: transparent;
-        border: none;
-    }
-
-    .line {
-        fill: none;
-        stroke: rgb(255, 255, 255);
-        stroke-width: 6;
-        transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-          stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 120;
       }
-      .line1 {
-        stroke-dasharray: 60 207;
-        stroke-width: 6;
+      svg {
+        transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
       }
-      .line2 {
-        stroke-dasharray: 60 60;
-        stroke-width: 6;
+      .active svg {
+        transform: rotate(90deg);
       }
-      .line3 {
-        stroke-dasharray: 60 207;
-        stroke-width: 6;
+      path {
+        transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1),
+          stroke-dasharray 500ms cubic-bezier(0.4, 0, 0.2, 1),
+          stroke-dashoffset 500ms cubic-bezier(0.4, 0, 0.2, 1);
       }
-      .opened .line1 {
-        stroke-dasharray: 90 207;
-        stroke-dashoffset: -134;
-        stroke-width: 6;
+      path:nth-child(1) {
+        transform-origin: 36% 40%;
       }
-      .opened .line2 {
-        stroke-dasharray: 1 60;
-        stroke-dashoffset: -30;
-        stroke-width: 6;
+      path:nth-child(2) {
+        stroke-dasharray: 29 299;
       }
-      .opened .line3 {
-        stroke-dasharray: 90 207;
-        stroke-dashoffset: -134;
-        stroke-width: 6;
+      path:nth-child(3) {
+        transform-origin: 35% 63%;
       }
+      path:nth-child(4) {
+        stroke-dasharray: 29 299;
+      }
+      path:nth-child(5) {
+        transform-origin: 61% 52%;
+      }
+      path:nth-child(6) {
+        transform-origin: 62% 52%;
+      }
+      .active path:nth-child(1) {
+        transform: translateX(9px) translateY(1px) rotate(45deg);
+      }
+      .active path:nth-child(2) {
+        stroke-dasharray: 225 299;
+        stroke-dashoffset: -72px;
+      }
+      .active path:nth-child(3) {
+        transform: translateX(9px) translateY(1px) rotate(-45deg);
+      }
+      .active path:nth-child(4) {
+        stroke-dasharray: 225 299;
+        stroke-dashoffset: -72px;
+      }
+      .active path:nth-child(5) {
+        transform: translateX(9px) translateY(1px) rotate(-45deg);
+      }
+      .active path:nth-child(6) {
+        transform: translateX(9px) translateY(1px) rotate(45deg);
+      }
+   
 
     .nav-mobile-overlay {
         position: fixed; 
@@ -118,10 +139,10 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        padding-top: 30px;
+        padding-top: 160px;
         width: 100vw; 
         height: 764px; 
-        top: 100px;
+        top: 0;
         left: 0;
         right: 0;
         bottom: 0;
@@ -174,6 +195,8 @@
     
     .logo {
         height: 40px;
+        margin-right: 20px;
+        z-index: 120;
     }
     
     .swiper {
@@ -255,12 +278,12 @@
     }
     
     .facts-section {
-        margin: 100px 0 190px 10px;
         background-color: #ffffff;
         display: grid;
-        grid-template-columns: 100px 200px;
-        grid-template-rows: 140px 80px 40px 650px;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 8fr 7fr 2fr 30fr;
         gap: 10px;
+        font-family: 'Cairo', sans-serif;
     }
     
     .reveal {
@@ -275,22 +298,24 @@
     }
     
     .bmw-info-img1 {
-        grid-row: 2 / span 2;
-        width: 100px;
+        grid-row: 2;
+        width: 100%;
     }
     
     .bmw-info-img2 {
         grid-column: 2 / span 1;
-        width: 200px;
+        grid-row: 1 / span 2;
+        width: 100%;
     }
     
     .bmw-info-box {
         grid-column: 1 / span 2;
         grid-row: 4; 
+        margin: 0 32px;
         display: grid;
-        grid-template-columns: 320px;
-        grid-template-rows: 200px 80px 80px 80px 80px 80px;
-        gap: 30px;  
+        grid-template-columns: 1fr;
+        grid-template-rows: 7fr 5fr 6fr 5fr 5fr 5fr;
+        gap: 1fr;  
     }
     
     .svg-el {
@@ -300,58 +325,61 @@
     
     .bmw-info-box-title {
         grid-column: 1;
-        margin: 0;
     }
     
     .bmw-info-box-id {
         border-bottom: 1px solid #4E4E4E;
         font-size: 12px;
+        font-weight: 700;
     }
 
     .bmw-info-box-text {
         font-size: 13px;
+        color: #4E4E4E;
     }
     
     .textarea {
         color: #4E4E4E;
         font-size: 14px;
+        line-height: 24px;
     }
     
     .innovation-section {
         display: grid;
-        grid-template-columns: 200px 100px;
-        grid-template-rows: 60px 200px 500px;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 6fr 40fr 56fr;
         gap: 10px;
-        margin: 90px 0 90px 10px;
+        margin: 90px 0;
         background-color: white;
     }
     
     .innovation-textarea {
+        margin: 0 32px;
         grid-column: 1 / span 2;
         grid-row: 3 / span 1;
     }
     
     .subtitle {
         color: #707070;
-        font-size: 20px;
+        font-size: 16px;
         font-family: 'Open Sans', sans-serif;
-        line-height: 32px;
+        line-height: 24px;
     }
     
     .innovation-img1 {
-        width: 200px;
+        width: 100%;
         grid-column: 1;
         grid-row: 2 / span 2;
     }
     
     .innovation-img2 {
         grid-column: 2;
-        grid-row: 1;
-        width: 100px;
+        grid-row: 1 / span 2;
+        width: 100%;
     }
     
     .gallery-section {
-        width: 98%;  
+        width: 96%;  
         margin: 100px 10px;
     }
     
@@ -403,8 +431,7 @@
     }
     
     .form-section {
-        margin: 90px 0;
-        height: 1200px;
+        margin: 90px 32px;;
         background-image: url(../public/images/tlo1.png);
         background-size: cover;
     }
@@ -428,6 +455,7 @@
         padding: 15px;
         margin-bottom: 30px;
         width: 250px;
+        font-size: 13px;
     }
     
     .input-radio {
@@ -439,7 +467,7 @@
         color:#FFFFFF;
         border: none;
         padding: 15px 40px;
-        margin: 50px 0 60px 0;
+        margin: 20px 0 60px 0;
         font-size: 14px;
         width: 150px;
         letter-spacing: 0.9px;
@@ -566,7 +594,7 @@ button {
     z-index: 100;
 }
 
-.menu {
+.hamburger-button { 
     display: none;
 }
 

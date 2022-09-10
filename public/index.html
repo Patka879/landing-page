@@ -7,10 +7,7 @@
         <title>BMW</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Open+Sans&family=Roboto:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
         <link rel="stylesheet" href="../src/style.css" />
     </head> 
@@ -24,13 +21,46 @@
         </div>
             <header>
                 <nav class="header-nav">
-                    <button id='toggle-menu-button' class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
-                        <svg width="50" height="50" viewBox="0 0 100 100">
-                          <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-                          <path class="line line2" d="M 20,50 H 80" />
-                          <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-                        </svg>
-                      </button>
+                    <div class="hamburger-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 200 200">
+                              <g stroke-width="6.5" stroke-linecap="round">
+                                <path
+                                  d="M72 82.286h28.75"
+                                  fill="#009100"
+                                  fill-rule="evenodd"
+                                  stroke="#fff"
+                                />
+                                <path
+                                  d="M100.75 103.714l72.482-.143c.043 39.398-32.284 71.434-72.16 71.434-39.878 0-72.204-32.036-72.204-71.554"
+                                  fill="none"
+                                  stroke="#fff"
+                                />
+                                <path
+                                  d="M72 125.143h28.75"
+                                  fill="#009100"
+                                  fill-rule="evenodd"
+                                  stroke="#fff"
+                                />
+                                <path
+                                  d="M100.75 103.714l-71.908-.143c.026-39.638 32.352-71.674 72.23-71.674 39.876 0 72.203 32.036 72.203 71.554"
+                                  fill="none"
+                                  stroke="#fff"
+                                />
+                                <path
+                                  d="M100.75 82.286h28.75"
+                                  fill="#009100"
+                                  fill-rule="evenodd"
+                                  stroke="#fff"
+                                />
+                                <path
+                                  d="M100.75 125.143h28.75"
+                                  fill="#009100"
+                                  fill-rule="evenodd"
+                                  stroke="#fff"
+                                />
+                              </g>
+                            </svg>
+                      </div>
                     <div class="nav-mobile-overlay">
                         <a class='nav-mobile-link' href='#main'>NOWE BMW iX</a>
                         <a class='nav-mobile-link' href='#form-section'>UMÓW JAZDĘ PRÓBNĄ</a>
@@ -91,10 +121,11 @@
                     <img class="bmw-info-img1" src="./images/info1.png" alt="bmw-car-front">
                     <img class="bmw-info-img2" src="./images/info2.png" alt="bmw-two-cars"> 
                     <div class="bmw-info-box">
-                        <h2 class="bmw-info-box-title">
+                        <div class="bmw-info-box-title">
                             <img class='svg-el' src="./images/pump.svg" alt="gas-pump"><br>
-                            <span>FAKTY</span><br>
-                            <span>O NOWYM BMW iX.</span></h2>
+                            <h3>FAKTY</h3>
+                            <h3>O NOWYM BMW iX.</h3>
+                        </div>
                         <div class="bmw-info-box-fact">
                             <p class="bmw-info-box-id">01</p>
                             <p class="bmw-info-box-text">Ponad 600km zasięgu *</p>
@@ -121,9 +152,9 @@
                     <div class="innovation-textarea">
                         <h2 class="innovation-textarea-title">
                             <img class='svg-el' src="./images/car.svg" alt="car-grey"><br>
-                            <span>INNOWACYJNA</span><br>
-                            <span>AERODYNAMIKA</span><br>
-                            <span>BMW iX.</span>
+                            <h3>INNOWACYJNA</h3>
+                            <h3>AERODYNAMIKA</h3>
+                            <h3>BMW iX.</h3>
                         </h2>
                         <p class="subtitle">BMW iX w każdym milimetrze swojej dynamicznej stylistyki wdraża zasadę „forma podąża za funkcją”.</p>
                         <p class="textarea">Widać to przede wszystkim po gładkiej karoserii ze zwężoną nadbudową kabiny i zredukowanymi fugami oraz po płaskim podwoziu. W połączeniu z zamkniętym przodem oraz dyfuzorem z tyłu i niezwykłymi detalami, takimi jak wpuszczane klamki czy zintegrowane z listwami szybowymi lusterka zewnętrzne, BMW iX osiąga doskonały współczynnik Cx wynoszący zaledwie 0,25. Dzięki temu łączy w sobie zasięg i wydajność z innowacyjną konstrukcją SAV-a.</p>
@@ -136,7 +167,7 @@
                 </section>
                 <section class="form-section reveal" id="form-section">
                     <div class="form-container">
-                        <h2>UMÓW JAZDĘ PRÓBNĄ</h2>
+                        <h3>UMÓW JAZDĘ PRÓBNĄ</h3>
                         <p class="subtitle">Zachęcamy do ograniczenia poruszania się i pozostania w domu.</p>
                         <p class="subtitle">Jeśli jednak jazda testowa okaże się niezbędna prosimy o wypełnienie poniższego formularza.</p>
                         <form class="form">
