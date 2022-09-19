@@ -75,7 +75,7 @@ document.querySelector('.ok-btn').addEventListener('click', function(event) {
 })
 
 function reveal() {
-    let reveals = document.querySelectorAll('.facts-section, .innovation-section, .gallery-section, .form-section');
+    let reveals = document.querySelectorAll('.reveal');
     for (let i = 0; i < reveals.length; i++) {
       let windowHeight = window.innerHeight;
       let elementTop = reveals[i].getBoundingClientRect().top;
@@ -90,13 +90,3 @@ function reveal() {
 
 window.addEventListener('scroll', reveal);
 reveal();
-
-document.querySelectorAll("a[href^='#']").forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
