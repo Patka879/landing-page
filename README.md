@@ -24,5 +24,5 @@ Install dependencies:
 $ npm install
 ```
 Run the project:
-ś
+
 Go to the directory of the project, open public folder and open HTML file in the browser.
